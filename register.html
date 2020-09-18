@@ -1,0 +1,48 @@
+<!doctype html>
+
+<!--
+Author: Jared Heeringa
+Date: 09/17/2020
+Class: CST126
+Project: Milestone #1
+-->
+
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+	<form action="userRegistration.php" method="post">
+        
+		<label for="firstName">First Name: </label>
+		<input type="text" name="firstName" id="firstName" placeholder="First Name" required/>
+        
+		<label for="lastName">Last Name: </label>
+		<input type="text" name="lastName" id="lastName" placeholder="Last Name" required/>
+        
+		<br/>
+        
+		<label for="userName">User Name: </label>
+		<input type="text" name="userName" id="userName" placeholder="Username" required/>
+        
+		<br>
+        
+		<label for="email">E-mail: </label>
+		<input type="text" name="email" id="email" placeholder="Email" required/>
+        
+		<br/>
+        
+		<label for="userPassword">Password: </label>
+		<input type="text" name="userPassword" id="userPassword" placeholder="Password (No real passwords. I don't hash-salt them)" required/>
+        
+		<br/>
+        
+		<label for="dateOfBirth">Data of Birth</label>
+		<input type="date" name="dateOfBirth" id="dateOfBirth" required/>
+        
+		<br/>
+        
+		<input type="submit" value="Register"/>	
+	</form>
+</body>
+</html>
