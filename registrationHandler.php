@@ -34,7 +34,7 @@ $sql_connection = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbtab
 
 
 //Actual SQL statement to execute below. Add data to the users table.
-$sql = "INSERT INTO users (FIRST_NAME, LAST_NAME, USER_NAME, EMAIL_ADDRESS, PASSWORD, DATE_OF_BIRTH) VALUES ('$firstName', '$lastName', '$userName', '$email', '$userPassword', '$dateOfBirth')";
+$sql = "INSERT INTO users (FIRST_NAME, LAST_NAME, USERNAME, EMAIL_ADDRESS, PASSWORD, DATE_OF_BIRTH) VALUES ('$firstName', '$lastName', '$userName', '$email', '$userPassword', '$dateOfBirth')";
 
 
 //Actually execute the SQL stament on the table
@@ -46,6 +46,6 @@ mysqli_close();
 
 
 //confirmation message to user that the form was submitted
-echo("<p><strong>Submitted</strong></p>");
+echo("<p><strong>Registation Submitted.</strong></p>");
 
 ?>
