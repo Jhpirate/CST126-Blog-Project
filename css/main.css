@@ -4,11 +4,12 @@ Date: 10/01/2020
 Class: CST126
 Project: Milestone #2
 */
+
 h1 {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	font-weight: bold;
 	font-size: 30px;
-	color: #DE5507;
-	text-decoration: underline, overline;
+	color: #de5507;
+	text-decoration: underline;
 	
 }
