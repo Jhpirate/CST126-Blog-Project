@@ -2,10 +2,10 @@
 
 function db_connect(){
     // Database connection credentials
-    $host = "gcu-cst126-blogproject-mysqldbserver.mysql.database.azure.com";
-    $user = "mysqldbuser@13.65.89.91";
-    $password = "dW3kRun5D2kefNK";
-    $database = "cst126_blogproject";
+    $host = "localhost";
+    $user = "gcuCST126dbUser";
+    $password = "pk4JLe8LNmsF7n2";
+    $database = "gcu_cst126";
 
     // Connection attempt
     $db_connection = mysqli_connect($host, $user, $password, $database);
