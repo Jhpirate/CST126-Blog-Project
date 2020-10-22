@@ -12,6 +12,7 @@ $blogPostContent = $_POST["blogContent"];
 
 // World list filter (replace bad words with *******
 // Read in file with bad words to array
+// Ideas from: https://stackoverflow.com/questions/6159683/read-each-line-of-txt-file-to-new-array-element
 $bad_words = file("wordlist_file/badwords.txt", FILE_IGNORE_NEW_LINES);
 
 // Debug print contents of the entire file
