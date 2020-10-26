@@ -2,7 +2,8 @@
 
 function db_connect(){
     // Database connection credentials
-    $host = "localhost";
+    // I have no idea how to connect to Azure
+    $host = "gcu-cst126-blogproject.mysql.database.azure.com";
     $user = "gcuCST126dbUser";
     $password = "pk4JLe8LNmsF7n2";
     $database = "gcu_cst126";
