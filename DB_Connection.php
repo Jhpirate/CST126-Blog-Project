@@ -3,15 +3,16 @@
 function db_connect(){
     // Database connection credentials
     $host = "127.0.0.1";
-    $user = "azureDBaccount";
-    $password = "pk4JLe8LNmsF7n2";
+    $user = "azure";
+    $password = "6#vWHD_$";
     $database = "cst126_blog_project";
     $database_port = "51208";
 
-//    $host = "gcu-cst126-blogproject.mysql.database.azure.com";
-//    $user = "gcuCST126dbUser";
-//    $password = "pk4JLe8LNmsF7n2";
-//    $database = "gcu_cst126";
+//    MAMP development environment credentials
+//    $host = "localhost";
+//    $user = "root";
+//    $password = "root";
+//    $database = "CST126_blog_project";
 
     // Connection attempt
     $db_connection = mysqli_connect($host, $user, $password, $database, $database_port);
