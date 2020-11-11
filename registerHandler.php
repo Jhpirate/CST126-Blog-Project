@@ -20,7 +20,8 @@ $dateOfBirth = $_POST["dateOfBirth"];
 $sql_connection = db_connect();
 
 // SQL statement to execute below. Adds data to the users table.
-$sql = "INSERT INTO users (FIRST_NAME, LAST_NAME, USERNAME, EMAIL_ADDRESS, PASSWORD, DATE_OF_BIRTH) VALUES ('$firstName', '$lastName', '$userName', '$email', '$userPassword', '$dateOfBirth')";
+// Insert default user role of 'user'
+$sql = "INSERT INTO users (FIRST_NAME, LAST_NAME, USERNAME, EMAIL_ADDRESS, PASSWORD, DATE_OF_BIRTH, USER_ROLE) VALUES ('$firstName', '$lastName', '$userName', '$email', '$userPassword', '$dateOfBirth', 'user')";
 
 //Actually execute the SQL statement on the table
 mysqli_query($sql_connection, $sql);
