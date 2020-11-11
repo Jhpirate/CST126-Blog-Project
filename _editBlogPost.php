@@ -3,12 +3,14 @@
     <meta charset="UTF-8">
     <title>CST126 - Blog Management</title>
 
+    <!-- START TEMPORARY IN-LINE CSS -->
     <style>
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
     </style>
+    <!-- END TEMPORARY IN-LINE CSS -->
 
 </head>
 <body>
