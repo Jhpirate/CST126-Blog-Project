@@ -7,7 +7,7 @@ function getAllBlogPosts(){
     //SQL statement to select the id, title, author, content, and tags
     $sql = "SELECT BLOG_ID, BLOG_TITLE, BLOG_AUTHOR, BLOG_CONTENT, BLOG_TAGS FROM blog";
 
-    $dbConnectionQuery = mysqli_query(db_connect(), $sql);
+    $dbConnectionQuery = mysqli_query(db_connect(), $sql) or die(mysqli_error(db_connect()));
 
     //declare variables
     $blogPostContents = array();
@@ -24,8 +24,3 @@ function getAllBlogPosts(){
     return $blogPostContents;
 
 }
-
-
-include "_displayAllBlogs.php";
-
-echo "<a href='index.html'>Home</a>";
