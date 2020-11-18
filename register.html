@@ -9,42 +9,42 @@ Project: Milestone #1
 
 <html lang="en">
 <head>
-<title>Registration Form</title>
+    <title>Registration Form</title>
 </head>
 <body>
-	<form action="registerHandler.php" method="post">
-		<table>
-			<tr>
-				<td><label for="firstName">First Name: </label></td>
-				<td><input type="text" name="firstName" id="firstName" placeholder="First Name" required/></td>
+<form class="pure-form" action="registerHandler.php" method="post">
+    <table>
+        <tr>
+            <td><label for="firstName">First Name: </label></td>
+            <td><input type="text" name="firstName" id="firstName" placeholder="First Name" required/></td>
 
-				<td><label for="lastName">Last Name: </label></td>
-				<td><input type="text" name="lastName" id="lastName" placeholder="Last Name" required/></td>
-			</tr>
-			<tr>
-				<td><label for="userName">User Name: </label></td>
-				<td><input type="text" name="userName" id="userName" placeholder="Username" required/></td>
-			</tr>
-			<tr>
-				<td><label for="email">E-mail: </label></td>
-				<td><input type="text" name="email" id="email" placeholder="Email" required/></td>
-			</tr>
-			<tr>
-				<td><label for="userPassword">Password: </label></td>
-				<td><input type="password" name="userPassword" id="userPassword" placeholder="Password (No real passwords. I don't hash/salt them)" required/></td>
-			</tr>
-			<tr>
-				<td><label for="dateOfBirth">Data of Birth</label></td>
-				<td><input type="date" name="dateOfBirth" id="dateOfBirth" required/></td>
-			</tr>
-			<tr>
-				<td><input type="reset" value="Reset"></td>
-				<td><input type="submit" value="Register"/></td>
-			</tr>
-		</table>
-	</form>
+            <td><label for="lastName">Last Name: </label></td>
+            <td><input type="text" name="lastName" id="lastName" placeholder="Last Name" required/></td>
+        </tr>
+        <tr>
+            <td><label for="userName">User Name: </label></td>
+            <td><input type="text" name="userName" id="userName" placeholder="Username" required/></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-mail: </label></td>
+            <td><input type="text" name="email" id="email" placeholder="Email" required/></td>
+        </tr>
+        <tr>
+            <td><label for="userPassword">Password: </label></td>
+            <td><input type="password" name="userPassword" id="userPassword" placeholder="Password (No real passwords. I don't hash/salt them)" required/></td>
+        </tr>
+        <tr>
+            <td><label for="dateOfBirth">Data of Birth</label></td>
+            <td><input type="date" name="dateOfBirth" id="dateOfBirth" required/></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="Register"/></td>
+        </tr>
+    </table>
+</form>
 
-	<a href="index.html">Main Menu</a>
+<a href="index.html">Main Menu</a>
 
 </body>
 </html>
