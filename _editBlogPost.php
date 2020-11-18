@@ -2,16 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CST126 - Blog Management</title>
-
-    <!-- START TEMPORARY IN-LINE CSS -->
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-    </style>
-    <!-- END TEMPORARY IN-LINE CSS -->
-
+    <link rel="stylesheet" href="css/tableStyle.css">
 </head>
 <body>
 
@@ -33,7 +24,7 @@
     $blogEntryToEdit = $_GET["id"]; //get the value from the URL
 
     //SQL select statement to get current blog post data
-    $sql = "SELECT BLOG_ID, BLOG_TITLE, BLOG_AUTHOR, BLOG_CONTENT, BLOG_TAGS from blog WHERE BLOG_ID=$blogEntryToEdit";
+    $sql = "SELECT BLOG_ID, BLOG_TITLE, BLOG_AUTHOR, BLOG_CONTENT, BLOG_TAGS from blog WHERE BLOG_ID='$blogEntryToEdit'";
 
     //Store result of SQL query in result here
     $result = mysqli_query(db_connect(), $sql);
