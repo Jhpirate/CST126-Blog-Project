@@ -7,11 +7,11 @@
 
 <body>
 
-    <h2>
-        <?php
-        echo($error_message);
-        ?>
-    </h2>
+<h2>
+    <?php
+    echo($error_message);
+    ?>
+</h2>
 
 </body>
 </html>

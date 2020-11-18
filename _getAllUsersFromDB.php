@@ -10,7 +10,8 @@
 
 require_once "DB_Connection.php";
 
-function getAllUsers(){
+function getAllUsers()
+{
     $sql = "SELECT ID, FIRST_NAME, LAST_NAME, USERNAME, USER_ROLE FROM users";
 
     $dbConnectionQuery = mysqli_query(db_connect(), $sql) or die(mysqli_error(db_connect()));
@@ -18,7 +19,7 @@ function getAllUsers(){
     $usersArray = array();
     $index = 0;
 
-    while($row = mysqli_fetch_array($dbConnectionQuery)){
+    while ($row = mysqli_fetch_array($dbConnectionQuery)) {
         $usersArray[$index] = array($row["ID"], $row["FIRST_NAME"], $row["LAST_NAME"], $row["USERNAME"], $row["USER_ROLE"]);
         $index++;
     }
