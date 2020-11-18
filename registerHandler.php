@@ -31,5 +31,4 @@ mysqli_close();
 
 //confirmation message to user that the form was submitted
 echo("<p><strong>Registration Submitted.</strong></p>"); //replace with loginResponse.php
-
-?>
+header("refresh:3;url=index.html");
