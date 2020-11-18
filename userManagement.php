@@ -1,5 +1,5 @@
 <!--
- * PHP page that is visited to actually view all users
+ * PHP page that is visited to view/manage all users
 -->
 <html lang="en">
 <head>

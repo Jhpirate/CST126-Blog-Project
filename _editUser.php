@@ -1,20 +1,21 @@
 <?php
 
-require_once "DB_Connection.php";
+    require_once "DB_Connection.php";
 
-$userID = $_GET["id"];
+    $userID = $_GET["id"];
 
-$sql = "SELECT * FROM users WHERE ID='$userID'";
+    $sql = "SELECT * FROM users WHERE ID='$userID'";
 
-$result = mysqli_query(db_connect(), $sql);
+    $result = mysqli_query(db_connect(), $sql);
 
-$row = mysqli_fetch_array($result);
-mysqli_close(db_connect());
+    $row = mysqli_fetch_array($result);
+    mysqli_close(db_connect());
 
 ?>
 
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>User Management - Edit User</title>
     <link rel="stylesheet" href="css/tableStyle.css">
 </head>
@@ -56,7 +57,8 @@ mysqli_close(db_connect());
     <tr>
         <?php
 
-        require_once "DB_Connection.php";
+        // Update & Delete Buttons
+        // Buttons are within a form
         echo "<td colspan='8'>";
         echo "<input type='submit' value='Update' formaction=''>";
         echo "<input type='submit' formaction='userManagement.php' value='Cancel Edit'>";
@@ -72,6 +74,7 @@ mysqli_close(db_connect());
 
 <?php
 
+// Get updated user information from text areas
 $newUserID = $_POST["newUserID"];
 $newFirstName = $_POST["newFirstName"];
 $newLastname = $_POST["newLastName"];
@@ -81,13 +84,14 @@ $newPassword = $_POST["newPassword"];
 $newUserDOB = $_POST["newUserDOB"];
 $newUserRole = $_POST["newUserRole"];
 
-$update_SQL = "UPDATE users SET ID='$newUserID', FIRST_NAME='$newFirstName', LAST_NAME='$newLastname', USERNAME='$newUsername', EMAIL_ADDRESS='$newEmailAddress', PASSWORD='$newPassword', DATE_OF_BIRTH='$newUserDOB', USER_ROLE='$newUserRole' WHERE ID='$userID' ";
-
-mysqli_query(db_connect(), $update_SQL);
-mysqli_close(db_connect());
-
 //Confirm successful update and redirect user back to the user list
 if(isset($newUserID, $newFirstName, $newFirstName, $newLastname, $newUsername, $newEmailAddress, $newPassword, $newUserDOB, $newUserRole)){
+    // SQL statement to update all fields with new info
+    $update_SQL = "UPDATE users SET ID='$newUserID', FIRST_NAME='$newFirstName', LAST_NAME='$newLastname', USERNAME='$newUsername', EMAIL_ADDRESS='$newEmailAddress', PASSWORD='$newPassword', DATE_OF_BIRTH='$newUserDOB', USER_ROLE='$newUserRole' WHERE ID='$userID' ";
+
+    mysqli_query(db_connect(), $update_SQL);
+    mysqli_close(db_connect());
+
     header("refresh:1;url=userManagement.php");
     echo "<p>User Successfully Updated...</p>";
 }
