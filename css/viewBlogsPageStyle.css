@@ -1,0 +1,38 @@
+table, th, td {
+    border-collapse: collapse;
+    padding: 12px;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    display: compact;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* Temporary hack to only allow 3 lines of text to be displayed */
+.text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 35px;
+    -webkit-line-clamp: 3; /* Write the number of lines you want to be displayed */
+    -webkit-box-orient: vertical;
+}
+
+.invert_effect {
+    filter: invert(10%);
+
+}
