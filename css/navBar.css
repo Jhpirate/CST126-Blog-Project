@@ -12,6 +12,7 @@ ul {
 
 li {
     float: left;
+    font-family: Arial, sans-serif;
 }
 
 li a {

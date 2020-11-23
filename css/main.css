@@ -12,3 +12,12 @@ h1 {
 	color: #de5507;
 	text-decoration: underline;
 }
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+p {
+	font-family: Arial, sans-serif;
+}

@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($result);
     <head>
         <meta charset="UTF-8">
         <title>Blog Management - Edit Blog</title>
-        <link rel="stylesheet" href="css/tableStyle.css">
+        <link rel="stylesheet" href="css/managementTableStyle.css">
     </head>
     <body>
 

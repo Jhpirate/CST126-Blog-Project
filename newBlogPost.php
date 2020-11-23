@@ -42,6 +42,6 @@ mysqli_close();
 
 // Tell user blog was successfully submitted
 echo("<p><strong>Blog Submitted.</strong></p>");
-echo("<a href='index.html'>Return Home</a>");
+echo("<a href='index.php'>Return Home</a>");
 
 ?>

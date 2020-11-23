@@ -17,7 +17,7 @@ mysqli_close(db_connect());
     <head>
         <meta charset="UTF-8">
         <title>User Management - Edit User</title>
-        <link rel="stylesheet" href="css/tableStyle.css">
+        <link rel="stylesheet" href="css/managementTableStyle.css">
     </head>
     <body>
 

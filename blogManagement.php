@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <title>Blog Manager</title>
-    <link rel="stylesheet" href="css/tableStyle.css">
+    <link rel="stylesheet" href="css/managementTableStyle.css">
 </head>
 <body>
 
