@@ -22,7 +22,7 @@ p {
 }
 
 /* Temporary hack to only allow 3 lines of text to be displayed */
-.text{
+.text {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

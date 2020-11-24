@@ -39,7 +39,7 @@ function getAllBlogData()
 
     //loop to add all content to the blog array
     while ($currentRow = mysqli_fetch_array($dbConnectionQuery)) {
-        $blogPostContents[$index] = array($currentRow["BLOG_ID"], $currentRow["BLOG_TITLE"], $currentRow["BLOG_AUTHOR"], $currentRow["BLOG_CREATION_DATE"], $currentRow["BLOG_LAST_UPDATED_DATE"] ,$currentRow["BLOG_CONTENT"], $currentRow["BLOG_TAGS"]);
+        $blogPostContents[$index] = array($currentRow["BLOG_ID"], $currentRow["BLOG_TITLE"], $currentRow["BLOG_AUTHOR"], $currentRow["BLOG_CREATION_DATE"], $currentRow["BLOG_LAST_UPDATED_DATE"], $currentRow["BLOG_CONTENT"], $currentRow["BLOG_TAGS"]);
         $index++;
     }
 

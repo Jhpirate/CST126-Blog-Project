@@ -9,6 +9,7 @@ Description: php page to handle login info
 
 // Contains the connection info for SQL database
 require("DB_Connection.php");
+session_start();
 
 // Get data from HTML form and store in variables
 $username = $_POST["username"];
@@ -47,13 +48,14 @@ if ($shouldQueryDB == true) {
     // 0 record means username/password combo doesn't exist
     // 2 records means 2 users have the same username/password combo
     if (mysqli_num_rows($result) == 1) {
-        echo("<p><strong>Login Successful</strong></p>");
-    } elseif (mysqli_num_rows($result) == 0) {
-        echo("<p><strong>Login Failed</strong></p>");
-    } elseif (mysqli_num_rows($result) > 1) {
-        echo("<p><strong>There are multiple users registered</strong></p>");
+        // Login successful
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['USERNAME'];
+        $_SESSION['userID'] = $row['ID'];
+        header('Location: index.php');
+        //echo("<p><strong>Login Successful</strong></p>");
     } else {
-        echo(mysqli_connect_error());
+        echo "<p><b>Login Failed</b></p>";
     }
 
     // Close the SQL link
