@@ -13,5 +13,5 @@ mysqli_close(db_connect()); //close the connection
 
 //Confirm successful delete and redirect user back to the blog manager page
 echo "<p>Blog entry deleted...</p>";
-header("refresh:3;url=_getAllBlogPostsFromDB.php");
-echo "<a href='_getAllBlogPostsFromDB.php'>Redirecting in 3 seconds. Click here if you are not automatically taken back.</a>";
+header("refresh:3;url=blogManagement.php");
+echo "<a href='blogManagement.php'>Redirecting in 3 seconds. Click here if you are not automatically taken back.</a>";
