@@ -9,7 +9,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    echo "Please login before posting";
+    echo "<p>Please login before posting</p><br>";
+    echo "<p><a href='login.php'>Click HERE if you were not automatically redirected</a></p>";
     header('Refresh:2; url=login.php');
     exit;
 }

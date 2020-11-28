@@ -7,13 +7,27 @@
 </head>
 <body>
 
-<ul>
-    <li><a href="index.php">Home</a></li>
-    <li class="active"><a href="viewBlogPosts.php">View Blogs</a></li>
-    <li><a href="newBlogPost.php">New Blog Post</a></li>
-    <li style="float: right"><a href="register.html">Register</a></li>
-    <li style="float: right"><a href="login.html">Login</a></li>
-</ul>
+<nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li class="active"><a href="viewBlogPosts.php">View Blogs</a></li>
+        <li><a href="newBlogPost.php">New Blog Post</a></li>
+        <?php
+        session_start();
+
+        echo $_SESSION['username'];
+        if (!isset($_SESSION['username'])) {
+            echo "<li style='float: right'><a href='register.html'>Register</a></li>";
+            echo "<li style='float: right'><a href='login.php'>Login</a></li>";
+
+        } else {
+            echo "<li style='float: right'><a href='userLogout.php'>Logout</a></li>";
+            echo "<li style='float: right'><a href='#'>User: " . $_SESSION['username'] . " | " . $_SESSION['userID'] . "</a></li>";
+        }
+        ?>
+
+    </ul>
+</nav>
 
 <!-- Display all the blog posts on the home page -->
 <?php

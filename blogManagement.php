@@ -38,5 +38,7 @@
     </table>
 </form>
 
+<a href="index.php">Return Home</a>
+
 </body>
 </html>
