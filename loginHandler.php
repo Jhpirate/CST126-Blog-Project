@@ -52,6 +52,7 @@ if ($shouldQueryDB == true) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['USERNAME'];
         $_SESSION['userID'] = $row['ID'];
+        $_SESSION['accessLevel'] = $row['USER_ROLE'];
         header('Location: index.php');
         //echo("<p><strong>Login Successful</strong></p>");
     } else {
