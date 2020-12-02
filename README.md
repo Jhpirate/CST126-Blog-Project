@@ -37,7 +37,7 @@ See below for complete project description (Fall 2020 Semester)
 
 [Milestone 8: Comment on and Rate a Blog Post](#milestone-8-comment-on-and-rate-a-blog-post)
 
-[Final Blog Application 20](#final-blog-application)
+[Final Blog Application](#final-blog-application)
 
 # Project Overview
 
