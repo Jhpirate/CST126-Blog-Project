@@ -9,35 +9,35 @@ See below for complete project description (Fall 2020 Semester)
 
 # Contents
 
-[Project Overview 2](#_Toc530480315)
+[Project Overview](#project-overview)
 
-[Design 2](#_Toc530480316)
+[Design](#Design)
 
-[Technical Requirements 2](#_Toc530480317)
+[Technical Requirements](#Technical-Requirements)
 
-[Functional Requirements 3](#_Toc530480318)
+[Functional Requirements](#Functional-Requirements)
 
-[Blog Project Suggested Schema 4](#_Toc530480319)
+[Blog Project Suggested Schema](#Blog-Project-Suggested-Schema)
 
-[Test Plan 6](#_Toc530480320)
+[Test Plan](#Test-Plan)
 
-[Milestone 1: User Registration Module 8](#_Toc530480321)
+[Milestone 1: User Registration Module](#milestone-1-user-registration-module)
 
-[Milestone 2: Login Page 9](#_Toc530480322)
+[Milestone 2: Login Page](#milestone-2-login-page)
 
-[Milestone 3: Blog Post 10](#_Toc530480323)
+[Milestone 3: Blog Post](#milestone-3-blog-post)
 
-[Milestone 4: Deploying and Hosting Your Website 12](#_Toc530480324)
+[Milestone 4: Deploying and Hosting Your Website](#milestone-4-deploying-and-hosting-your-website)
 
-[Milestone 5: User Administrator 13](#_Toc530480325)
+[Milestone 5: User Administrator](#milestone-5-user-administrator)
 
-[Milestone 6: List of Blog Posts With Update and Delete Blog Module 15](#_Toc530480326)
+[Milestone 6: List of Blog Posts With Update and Delete Blog Module](#milestone-6-list-of-blog-posts-with-update-and-delete-blog-module)
 
-[Milestone 7: Search Blog Module 17](#_Toc530480327)
+[Milestone 7: Search Blog Module](#milestone-7-search-blog-module)
 
-[Milestone 8: Comment on and Rate a Blog Post 19](#_Toc530480328)
+[Milestone 8: Comment on and Rate a Blog Post](#milestone-8-comment-on-and-rate-a-blog-post)
 
-[Final Blog Application 20](#_Toc530480329)
+[Final Blog Application 20](#final-blog-application)
 
 # Project Overview
 
@@ -671,3 +671,6 @@ Submit the following:
 3. Revised project and code files (as needed). Make sure any revisions are noted within the project report.
 
 © 2019. Grand Canyon University. All Rights Reserved.
+
+
+[reference]: #'Project Overview'
