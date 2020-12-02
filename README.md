@@ -88,10 +88,8 @@ In this course, students will create a blogging site implementing the design, re
 | --- | --- | --- |
 | Self-Registration | Process user information Verify that user does not exist Store information in users table | Users personal information |
 | User Login | Process user information Authenticate user Password retrieval / (reset not retrieve). How this is implemented is a complicated question. | Login &amp; Passwords |
-| Main App Administration screen | Create user Manage user&#39;s roles and permissions Delete users Email users (individual and group) Edit any post or comment Edit categories (if implemented) | Roles and permissions
- |
-| Content Administration screen | Manage posts and categoriesRemove post Edit Post Tag post | CategoriesPosts
- |
+| Main App Administration screen | Create user Manage user&#39;s roles and permissions Delete users Email users (individual and group) Edit any post or comment Edit categories (if implemented) | Roles and permissions |
+| Content Administration screen | Manage posts and categoriesRemove post Edit Post Tag post | CategoriesPosts |
 | New Post | Create post Reply to post (you can&#39;t reply to a post when creating one).Store post in post table Categorize post Tag post Filter language | Posts |
 | List of posts | Lists posts Filter list (by date, topic, keyword) Sort list View post Pagination | Posts |
 | Search | Search post (by user, by category, by date, by title) Search user (by last name, role) | PostsUsers |
@@ -671,6 +669,3 @@ Submit the following:
 3. Revised project and code files (as needed). Make sure any revisions are noted within the project report.
 
 © 2019. Grand Canyon University. All Rights Reserved.
-
-
-[reference]: #'Project Overview'
