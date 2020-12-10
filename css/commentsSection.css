@@ -1,0 +1,16 @@
+table.commentSection {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.commentSection th, .commentSection tr, .commentSection td {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+th {
+    width: 20%;
+    text-align: left;
+    padding: 10px;
+}
