@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-<title>Test Page</title>
 <head>
     <title>Test page</title>
     <!-- Invert the placeholder logo so I dont have to make a new one-->

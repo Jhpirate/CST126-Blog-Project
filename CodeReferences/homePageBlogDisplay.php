@@ -4,7 +4,10 @@ require_once "_getAllBlogPostsFromDB.php";
 $blogPosts = getAllBlogData();
 
 for ($i = 0; $i < count($blogPosts); $i++) {
+    $blogID = $blogPosts[$i][0];
+
     echo "<table>";
+    echo "<form action='_viewSingleBlog.php' method='get'>";
     echo "<hr>";
 
     echo "<tr>";
@@ -33,5 +36,15 @@ for ($i = 0; $i < count($blogPosts); $i++) {
     echo "<td class='text'>" . $blogPosts[$i][5] . "</td>";
     echo "</tr>";
 
+    //Read more
+    echo "<tr>";
+    echo "<td><input type='hidden' name='blogID' value='$blogID'></td>";
+    echo "</tr>";
+
+    echo "<tr>";
+    echo "<td><input type='submit' value='Read More...'></td>";
+    echo "</tr>";
+
+    echo "</form>";
     echo "</table>";
 }
