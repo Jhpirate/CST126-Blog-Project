@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
         </tr>
         <tr>
             <td><label for="blogAuthor">Author</label></td>
-            <td><input type="text" name="blogAuthor" id="blogAuthor" placeholder="Author"></td>
+            <td><input type="text" name="blogAuthor" id="blogAuthor" placeholder="Author" value="<?php echo $_SESSION["username"] ?>"></td>
         </tr>
         <tr>
             <td><label for="blogContent">Blog Post</label></td>

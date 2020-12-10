@@ -1,12 +1,13 @@
 <?php
-
+session_start();
 // We need the DB_connection file or we cant add the blog to the database
 require "DB_Connection.php";
 
 // Declare variable to hold information captured from the html form
 $blogName = $_POST["blogName"];
 $blogAuthor = $_POST["blogAuthor"];
-$blogPublishDate = date("Y-m-d"); //Get current date as the publish date (YYYY-MM-DD)
+$blogUser = $_SESSION["userID"];
+$blogPublishDate = date("Y-m-d"); // Publish date (YYYY-MM-DD)
 //$blogUpdateDate = date("Y-m-d"); //Might re-add later, but disabled right now
 $blogPostContent = $_POST["blogContent"];
 
@@ -30,18 +31,14 @@ foreach ($bad_words as $bad_word) {
 $sql_connection = db_connect();
 
 // SQL statement to execute
-//$sql_statement = "INSERT INTO blog (BLOG_TITLE, BLOG_AUTHOR, BLOG_CREATION_DATE, BLOG_CONTENT) VALUES ('$blogName', '$blogAuthor', '$blogPublishDate', '$censored_blog_content' ))";
-//$sql_statement = "INSERT INTO blog ( BLOG_TITLE, BLOG_AUTHOR, BLOG_CONTENT ) VALUES ( '$blogName', '$blogAuthor', '$censored_blog_content' ))";
-$sql_statement = "INSERT INTO blog (BLOG_TITLE, BLOG_AUTHOR, BLOG_CREATION_DATE, BLOG_CONTENT) VALUES ('$blogName', '$blogAuthor', '$blogPublishDate', '$censored_blog_content')";
+$sql_statement = "INSERT INTO blog (BLOG_TITLE, BLOG_AUTHOR, BLOG_CREATION_DATE, BLOG_CONTENT, users_ID) VALUES ('$blogName', '$blogAuthor','$blogPublishDate', '$censored_blog_content', '$blogUser')";
 
 // Execute the SQL statement
 mysqli_query($sql_connection, $sql_statement);
 
 // Close data connection
-mysqli_close();
+mysqli_close(db_connect());
 
 // Tell user blog was successfully submitted
 echo("<p><strong>Blog Submitted.</strong></p>");
 echo("<a href='index.php'>Return Home</a>");
-
-?>
