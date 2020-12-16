@@ -5,7 +5,7 @@ require_once "DB_Connection.php";
 $searchValue = $_GET['searchValue'];
 $searchResults = getSearchResults($searchValue);
 
-
+// Get our search results from the database
 function getSearchResults($p_searchVal){
     $connection = db_connect();
     $sql_statement = "SELECT * FROM blog WHERE BLOG_TITLE LIKE '%$p_searchVal%' OR BLOG_CONTENT LIKE '%$p_searchVal%' OR BLOG_TAGS LIKE '%$p_searchVal%'";
@@ -30,7 +30,36 @@ function getSearchResults($p_searchVal){
     <meta charset="UTF-8">
 <!--    <link rel="stylesheet" href="css/managementTableStyle.css">-->
     <link rel="stylesheet" href="css/viewBlogsPageStyle.css">
+    <link rel="stylesheet" href="css/navBar.css">
     <title>Blog - Search</title>
+
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="viewBlogPosts.php">View Blogs</a></li>
+        <li><a href="newBlogPost.php">New Blog Post</a></li>
+        <li class="active"><a href="searchBlog.php">Search Blogs</a></li>
+        <?php
+        session_start();
+
+        if (!isset($_SESSION['username'])) {
+            echo "<li style='float: right'><a href='register.html'>Register</a></li>";
+            echo "<li style='float: right'><a href='login.php'>Login</a></li>";
+
+        } else {
+            if($_SESSION['accessLevel'] == "admin"){
+                echo "<li><a href='blogManagement.php'>Blog Management</a></li>";
+                echo "<li><a href='userManagement.php'>User Management</a></li>";
+                echo "<li style='float: right'><a href='userLogout.php'>Logout</a></li>";
+                echo "<li style='float: right'><a href='#'>User: " . $_SESSION['username'] . " | " . $_SESSION['userID'] . "</a></li>";
+
+            } else {
+                echo "<li style='float: right'><a href='userLogout.php'>Logout</a></li>";
+                echo "<li style='float: right'><a href='#'>User: " . $_SESSION['username'] . " | " . $_SESSION['userID'] . "</a></li>";
+            }
+        }
+        ?>
+
+    </ul>
 </head>
 <body>
 
